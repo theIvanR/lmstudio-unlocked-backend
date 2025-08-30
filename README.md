@@ -28,9 +28,8 @@ Example:
 ```
 llama.cpp-win-x86_64-vulkan-avx-1.48.0
 ```
-
-3. (Optional) Edit the metadata (`backend-manifest.json` / `display-data.json`) if you want to adjust the display name or required features.  
-4. Restart LM Studio — your custom backend should now appear.  
+ 
+3. Restart LM Studio — your custom backend should now appear. Enjoy!
 
 ## Notes
 - LM Studio is **just a wrapper** — these patched backends prove it can run on much older CPUs and GPUs than claimed.  
