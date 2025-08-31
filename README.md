@@ -6,7 +6,6 @@ This repo contains ready-to-drop backend folders you can copy into LM Studio's b
 
 - **AVX1 CPU-only** (stable)  
 - **Vulkan (AVX1) GPU backend** (stable)  
-- **Experimental:** no-AVX backend (works in limited scenarios)
 
 Others can be created on request or by following the instructions in **Generate arbitrary backend** (see docs/pdf).
 
