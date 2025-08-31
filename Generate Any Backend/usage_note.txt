@@ -1,1 +1,0 @@
-To generate any backend, run these on desired version of llama cpp, then replace needed files from guide in the lm studio backends and come up with friendly name
