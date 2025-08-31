@@ -1,6 +1,6 @@
 # LM Studio Unlocked Backend
 
-This repo provides patched **llama.cpp** backends for [LM Studio](https://lmstudio.ai/), allowing it to run on a much wider range of hardware.  
+This repo provides patched ("unoficial") **llama.cpp** backends for [LM Studio](https://lmstudio.ai/), allowing it to run on a much wider range of hardware.  
 
 LM Studio is just a GUI wrapper around `llama.cpp`. By default, its distributed backends require **AVX2** or specific modern GPU features.  
 This project shows how to **patch the backend folders** so that LM Studio runs on:  
