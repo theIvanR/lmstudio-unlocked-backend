@@ -90,7 +90,7 @@ If you prefer a one-line script or CI example, check `docs/generate-arbitrary-ba
 - AVX1 CPU builds will be slower than AVX2/AVX512 builds but are usable for smaller models and experiments.  
 - Vulkan backend performance depends heavily on your GPU and driver — older Vulkan-capable GPUs can still be effective for smaller models.
 - If you are experiencing issues like 18446744072635812000 and other random model crashes on kepler gpus, set the batch evaluation size lower to say 384. This is a known issue in vulkan which as of September 2025 has not been patched by devs. 
-
+- Flash Attention currently appears broken on Vulkan, issue appears to be with an underflow and a NaN in the llama backend itself, hopefully will be mitigated soon. 
 ---
 
 # Licensing & disclaimer
