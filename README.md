@@ -51,7 +51,7 @@ LM Studio is basically a GUI wrapper around `llama.cpp`. Distributed backends of
 3. Restart LM Studio. Your custom backend(s) should appear in the backend selection list.
 
 ---
-# Important Update about Vulkan Backend!
+# Important Update about Vulkan Backend! (Testers wanted for this patch on Cuda)
 In the new versions, it seems the vulkan backend is already built without AVX2 instructions, so simply patching the backend manifest to use AVX is sufficient!!!
 ```
 "instruction_set_extensions": [
