@@ -30,9 +30,11 @@ for /L %%i in (0,1,7) do (
         rem Delete any leftover build directory
         rmdir /s /q %%a
         rem Launch build in a new window
-        start "" cmd /c "cmake -S . -B %%a -G Ninja -DCMAKE_BUILD_TYPE=Release -DGGML_AVX=%%b -DGGML_AVX2=%%c -DGGML_AVX512=%%d && cmake --build %%a -- -j %CORES%"
+        rem start "" cmd /c "cmake -S . -B %%a -G Ninja -DCMAKE_BUILD_TYPE=Release -DGGML_AVX=%%b -DGGML_AVX2=%%c -DGGML_AVX512=%%d && cmake --build %%a -- -j %CORES%"
+        start "" cmd /c "cmake -S . -B %%a -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_FLAGS_RELEASE=-O3 -DCMAKE_CXX_FLAGS_RELEASE=-O3 -DGGML_AVX=%%b -DGGML_AVX2=%%c -DGGML_AVX512=%%d && cmake --build %%a -- -j %CORES%"
     )
 )
 
 echo All CPU builds started. Each will run in its own window.
 pause
+
