@@ -7,13 +7,11 @@ Following backends available:
 - ✅ `cpu-avx1` — CPU-only AVX1 build (confirmed working on Ivy Bridge)  
 - ✅ `vulkan-avx1` — Vulkan GPU backend built with AVX1 support (confirmed working on Ivy Bridge + Vulkan-capable GPU)
 
-Following backends being implemented: 
+Following backends are being developed:
 - 🚧 `noavx-experimental` — experimental pure fallback; limited performance and compatibility
 - 🚧 `avx512` — coming soon
 - 🚧 `cuda` — coming soon
   
-Others can be created on request or by following the instructions in **Generate arbitrary backend** (see docs/pdf).
-
 > Drag-and-drop deploy: copy any backend folder from this repo into LM Studio's backends directory — restart LM Studio and pick the backend.
 
 ---
@@ -25,18 +23,6 @@ LM Studio is basically a GUI wrapper around `llama.cpp`. Distributed backends of
 - CPU-only legacy machines (AVX1 / older Intel generations such as Ivy Bridge)  
 - Vulkan-compatible GPUs with AVX1 builds  
 - Experimental no-AVX option for extremely old/odd systems
-
----
-
-# Included backends
-
-- ✅ `cpu-avx1` — CPU-only AVX1 build (confirmed working on Ivy Bridge)  
-- ✅ `vulkan-avx1` — Vulkan GPU backend built with AVX1 support (confirmed working on Ivy Bridge + Vulkan-capable GPU)  
-- 🚧 `noavx-experimental` — experimental pure fallback; limited performance and compatibility  
-- 🚧 `cuda` — planned (works analogously; older CUDA GPUs < CC 5.0 require BF16 fixes — coming soon)
-
-(Exact folder names are provided in the repo. Example folder: `llama.cpp-win-x86_64-vulkan-avx-1.48.0`.)
-
 ---
 
 # Quick usage — drag & drop
