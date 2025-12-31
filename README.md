@@ -27,7 +27,7 @@ In new versions, Vulkan backend is already built without AVX2 so patching it is 
      C:\Users\<you>\.lmstudio\extensions\backends\
      ```
 
-2. Copy one or more backend folders from `Releases` in this repo into LMstudio directory.
+2. Copy one or more backend folders from `Releases` in this repo into LM Studio directory.
 
 3. Restart LM Studio. Your custom backend(s) should appear in the backend selection list.
    
