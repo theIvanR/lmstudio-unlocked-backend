@@ -43,7 +43,7 @@ echo.
 
 rem -------------------------
 rem Set optimization and linker flags
-set "OPT_FLAGS=%ARCH_FLAG% /O2 /Ot /fp:fast /GL /DNDEBUG"
+set "OPT_FLAGS=%ARCH_FLAG% /Ot /fp:fast /GL /DNDEBUG"
 set "LINK_FLAGS=/LTCG"
 
 rem -------------------------
