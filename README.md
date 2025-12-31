@@ -12,7 +12,8 @@
 - 🚧 `avx512` — coming soon
 - 🚧 `cuda` — coming soon
   
-## Important Update Regarding Stock GPU Backends: In new versions, Vulkan backend is already built without AVX2 so patching it is and **confirmed working**. This is likely to work on CUDA gpus as well however is untested at the monent.
+## Important Update Regarding Stock GPU Backends: 
+In new versions, Vulkan backend is already built without AVX2 so patching it is and **confirmed working**. This is likely to work on CUDA gpus as well however is untested at the monent.
 ```
 "instruction_set_extensions": [
       "AVX"
