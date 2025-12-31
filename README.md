@@ -13,8 +13,20 @@ Following backends are being developed:
 - 🚧 `cuda` — coming soon
   
 > Drag-and-drop deploy: copy any backend folder from this repo into LM Studio's backends directory — restart LM Studio and pick the backend.
+> Custom backends can be generated for any architecture using the instructions in `Generate Backends`
 
 ---
+# Important Update Regarding Stock GPU Backends: 
+In the new versions, it seems the vulkan backend is already built without AVX2 instructions, so simply patching it is suficient and **confirmed working**. This is likely to work on CUDA gpus as well
+```
+"instruction_set_extensions": [
+      "AVX"
+    ]
+```
+
+---
+
+
 
 # What this does
 
@@ -35,33 +47,6 @@ LM Studio is basically a GUI wrapper around `llama.cpp`. Distributed backends of
 2. Copy one or more backend folders from this repo into that directory.
 
 3. Restart LM Studio. Your custom backend(s) should appear in the backend selection list.
-
----
-# Important Update about Vulkan Backend! (Testers wanted for this patch on Cuda)
-In the new versions, it seems the vulkan backend is already built without AVX2 instructions, so simply patching the backend manifest to use AVX is sufficient!!!
-```
-"instruction_set_extensions": [
-      "AVX"
-    ]
-```
-
-
-# Generate arbitrary backend (short guide)
-
-If you want to build your own backend or adapt one to different CPU/GPU targets, follow the full instructions in `docs/generate-arbitrary-backend.pdf`. Quick summary of the workflow:
-
-1. **Clone `llama.cpp` (or fork)** and check out the tag/version you want to target.  
-2. **Apply patches** contained in this repo (or adapt them): these patches add legacy CPU fallbacks (AVX1 / no-AVX), Vulkan tweaks, and packaging conventions compatible with LM Studio.  
-3. **Build** for your target:
-- Create a clean build directory.  
-- Use your platform's build tools (CMake / make / MSVC) and specify the proper target options for CPU/GPU.  
-- Confirm the binary runs on the target machine (smoke-test with `--help` / small model run).  
-4. **Package** the resulting binaries and required DLLs into a folder named with the same style LM Studio expects (example: `llama.cpp-win-x86_64-vulkan-avx-1.48.0`). Include a small `manifest` or `README.txt` inside the folder describing the build (platform, date, special notes).  
-5. **Drop** the folder into LM Studio's backends dir and restart LM Studio.
-
-If you prefer a one-line script or CI example, check `docs/generate-arbitrary-backend.pdf` for step-by-step commands and sample scripts.
-
----
 
 # Troubleshooting & tips
 
@@ -100,7 +85,3 @@ If you prefer a one-line script or CI example, check `docs/generate-arbitrary-ba
 - If you want a custom backend built for a particular CPU/GPU, open an issue or request and we'll try to provide one.
 
 ---
-
-## TL;DR
-We were told it couldn't be done. We did it anyway. Drop the included backend folder(s) into LM Studio's `backends` folder, restart, and enjoy your legacy-hardware-friendly backend.
-
