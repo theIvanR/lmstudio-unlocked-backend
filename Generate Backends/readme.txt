@@ -11,7 +11,7 @@ B: Steps to Build and Update Backend:
 
 2. Run the fetch script
 
-3. Run the build script of your choice
+3. Run the build script of your choice using desired flags (for example, no avx or avx 512 and all cuda versions etc etc)
 
 4. Once the build completes, go to the build output folder and copy the following files:
    - ggml-base.dll
