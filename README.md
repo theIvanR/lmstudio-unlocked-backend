@@ -1,6 +1,6 @@
 # LM Studio Unlocked Backend
 
-**Premise (short):** the developer team said it wouldn't work. we did it anyway and built our own **unofficial** backends for LM Studio — patched `llama.cpp` backends that let LM Studio run on much wider / older hardware.
+**Premise:** the developer team said it wouldn't work. we did it anyway and built our own **unofficial** backends for LM Studio — patched `llama.cpp` backends that let LM Studio run on much wider / older hardware.
 
 ## Backends Available: 
 
@@ -9,7 +9,7 @@
 
 ## Backends in Developed:
 - 🚧 `noavx-experimental` — experimental pure fallback; limited performance and compatibility
-- 🚧 `avx512` — coming soon
+- 🚧 `avx512++` — coming soon
 - 🚧 `cuda` — coming soon
   
 ## Important Update Regarding Stock GPU Backends: 
