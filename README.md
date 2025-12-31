@@ -23,21 +23,6 @@ In new versions, Vulkan backend is already built without AVX2 so patching it is 
 > Drag-and-drop deploy: copy any backend folder from this repo into LM Studio's backends directory — restart LM Studio and pick the backend.
 > Custom backends can be generated for any architecture using the instructions in `Generate Backends`
 
-
-
----
-
-
-
-# What this does
-
-LM Studio is basically a GUI wrapper around `llama.cpp`. Distributed backends often require AVX2 or modern GPU features. These patched/unofficial backends demonstrate that LM Studio can run on much older CPUs/GPUs than the official backends claim — i.e., the GUI will work with:
-
-- CPU-only legacy machines (AVX1 / older Intel generations such as Ivy Bridge)  
-- Vulkan-compatible GPUs with AVX1 builds  
-- Experimental no-AVX option for extremely old/odd systems
----
-
 # Quick usage — drag & drop
 
 1. Locate LM Studio backends folder on Windows
@@ -48,6 +33,8 @@ LM Studio is basically a GUI wrapper around `llama.cpp`. Distributed backends of
 2. Copy one or more backend folders from this repo into that directory.
 
 3. Restart LM Studio. Your custom backend(s) should appear in the backend selection list.
+   
+4. Want to Build your own? Follow instructions in `Generate Backends`
 
 # Troubleshooting & tips
 
