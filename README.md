@@ -61,5 +61,3 @@ In new versions, Vulkan backend is already built without AVX2 so patching it is 
 
 - Pull requests welcome: add build scripts, CI, or additional patched backends.  
 - If you want a custom backend built for a particular CPU/GPU, open an issue or request and we'll try to provide one.
-
----
