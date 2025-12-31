@@ -2,12 +2,12 @@
 
 **Premise (short):** the developer team said it wouldn't work. we did it anyway and built our own **unofficial** backends for LM Studio — patched `llama.cpp` backends that let LM Studio run on much wider / older hardware.
 
-## Following backends available: 
+## Backends Available: 
 
 - ✅ `cpu-avx1` — CPU-only AVX1 build (confirmed working on Ivy Bridge)  
 - ✅ `vulkan-avx1` — Vulkan GPU backend built with AVX1 support (confirmed working on Ivy Bridge + Vulkan-capable GPU)
 
-## Following backends are being developed:
+## Backends in Developed:
 - 🚧 `noavx-experimental` — experimental pure fallback; limited performance and compatibility
 - 🚧 `avx512` — coming soon
 - 🚧 `cuda` — coming soon
@@ -20,9 +20,6 @@ In new versions, Vulkan backend is already built without AVX2 so patching it is 
     ]
 ```
   
-> Drag-and-drop deploy: copy any backend folder from this repo into LM Studio's backends directory — restart LM Studio and pick the backend.
-> Custom backends can be generated for any architecture using the instructions in `Generate Backends`
-
 # Quick usage — drag & drop
 
 1. Locate LM Studio backends folder on Windows
@@ -52,16 +49,11 @@ In new versions, Vulkan backend is already built without AVX2 so patching it is 
 - Flash Attention currently appears broken on Vulkan, issue appears to be with an underflow and a NaN in the llama backend itself, hopefully will be mitigated soon. 
 ---
 
-# Licensing & disclaimer
+# Licensing, Disclaimer, Credits
 
 - **Unofficial / experimental.** These backends are community patches and are **not** official LM Studio files. Use at your own risk.  
 - **License:** MIT (this repo follows the same spirit as `llama.cpp` licensing).  
 - We make no warranties about performance or stability. If you need a production-grade setup, please use official backends or adapt these patches carefully.
-
----
-
-# Credits
-
 - Patches and testing by the repo maintainers (this branch).  
 - Based on work and license of `llama.cpp` and LM Studio (this repo does not claim ownership of upstream projects).
 
