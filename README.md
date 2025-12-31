@@ -48,13 +48,12 @@ In new versions, Vulkan backend is already built without AVX2 so patching it is 
 - If you are experiencing issues like 18446744072635812000 and other random model crashes on kepler gpus, set the batch evaluation size lower to say 384. This is a known issue in vulkan which as of September 2025 has not been patched by devs. 
 - Flash Attention currently appears broken on Vulkan, issue appears to be with an underflow and a NaN in the llama backend itself, hopefully will be mitigated soon. 
 
-# Licensing, Disclaimer, Credits
+## Licensing, Disclaimer, Credits
 
-- **Unofficial / experimental.** These backends are community patches and are **not** official LM Studio files. Use at your own risk.  
-- **License:** MIT (this repo follows the same spirit as `llama.cpp` licensing).  
-- We make no warranties about performance or stability. If you need a production-grade setup, please use official backends or adapt these patches carefully.
-- Patches and testing by the repo maintainers (this branch).  
-- Based on work and license of `llama.cpp` and LM Studio (this repo does not claim ownership of upstream projects).
+- **Unofficial / experimental:** Community-made patches; use at your own risk.  
+- **License:** MIT, following `llama.cpp` conventions.  
+- **No warranties:** Not guaranteed for production or mission-critical use—use official LM Studio backends for stability.  
+- **Credits:** Patches tested by repo maintainers; based on `llama.cpp` and LM Studio work.
 
 
 # Contact / contribute
