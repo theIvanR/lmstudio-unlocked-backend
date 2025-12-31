@@ -12,16 +12,17 @@
 - 🚧 `avx512` — coming soon
 - 🚧 `cuda` — coming soon
   
-> Drag-and-drop deploy: copy any backend folder from this repo into LM Studio's backends directory — restart LM Studio and pick the backend.
-> Custom backends can be generated for any architecture using the instructions in `Generate Backends`
-
-# Important Update Regarding Stock GPU Backends: 
-In the new versions, it seems the vulkan backend is already built without AVX2 instructions, so simply patching it is suficient and **confirmed working**. This is likely to work on CUDA gpus as well
+## Important Update Regarding Stock GPU Backends: In new versions, Vulkan backend is already built without AVX2 so patching it is and **confirmed working**. This is likely to work on CUDA gpus as well however is untested at the monent.
 ```
 "instruction_set_extensions": [
       "AVX"
     ]
 ```
+  
+> Drag-and-drop deploy: copy any backend folder from this repo into LM Studio's backends directory — restart LM Studio and pick the backend.
+> Custom backends can be generated for any architecture using the instructions in `Generate Backends`
+
+
 
 ---
 
