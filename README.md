@@ -2,11 +2,16 @@
 
 **Premise (short):** the developer team said it wouldn't work. we did it anyway and built our own **unofficial** backends for LM Studio — patched `llama.cpp` backends that let LM Studio run on much wider / older hardware.
 
-This repo contains ready-to-drop backend folders you can copy into LM Studio's backend directory. So far I have two *confirmed working* backends on my Ivy Bridge system:
+Following backends available: 
 
-- **AVX1 CPU-only** (stable)  
-- **Vulkan (AVX1) GPU backend** (stable)  
+- ✅ `cpu-avx1` — CPU-only AVX1 build (confirmed working on Ivy Bridge)  
+- ✅ `vulkan-avx1` — Vulkan GPU backend built with AVX1 support (confirmed working on Ivy Bridge + Vulkan-capable GPU)
 
+Following backends being implemented: 
+- 🚧 `noavx-experimental` — experimental pure fallback; limited performance and compatibility
+- 🚧 `avx512` — coming soon
+- 🚧 `cuda` — coming soon
+  
 Others can be created on request or by following the instructions in **Generate arbitrary backend** (see docs/pdf).
 
 > Drag-and-drop deploy: copy any backend folder from this repo into LM Studio's backends directory — restart LM Studio and pick the backend.
@@ -36,14 +41,9 @@ LM Studio is basically a GUI wrapper around `llama.cpp`. Distributed backends of
 
 # Quick usage — drag & drop
 
-1. Locate LM Studio backends folder. Example paths:
-   - Windows:  
+1. Locate LM Studio backends folder on Windows
      ```
      C:\Users\<you>\.lmstudio\extensions\backends\
-     ```
-   - Linux (example):  
-     ```
-     ~/.lmstudio/extensions/backends/
      ```
 
 2. Copy one or more backend folders from this repo into that directory.
