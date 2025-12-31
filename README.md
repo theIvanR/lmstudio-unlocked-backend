@@ -2,12 +2,12 @@
 
 **Premise (short):** the developer team said it wouldn't work. we did it anyway and built our own **unofficial** backends for LM Studio — patched `llama.cpp` backends that let LM Studio run on much wider / older hardware.
 
-##Following backends available: 
+## Following backends available: 
 
 - ✅ `cpu-avx1` — CPU-only AVX1 build (confirmed working on Ivy Bridge)  
 - ✅ `vulkan-avx1` — Vulkan GPU backend built with AVX1 support (confirmed working on Ivy Bridge + Vulkan-capable GPU)
 
-##Following backends are being developed:
+## Following backends are being developed:
 - 🚧 `noavx-experimental` — experimental pure fallback; limited performance and compatibility
 - 🚧 `avx512` — coming soon
 - 🚧 `cuda` — coming soon
