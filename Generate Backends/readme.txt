@@ -1,14 +1,11 @@
-LLM Studio Custom Llama.cpp Backend Update Instructions
-=======================================================
-
-Prerequisites:
+A: Prerequisites:
 --------------
 - LLM Studio installed
 - CUDA toolkit (if building GPU backend)
 - Vulkan SDK (if building Vulkan backend)
 - Visual Studio 2019 (or newer) with C++ build tools
 
-Steps to Build and Update Backend:
+B: Steps to Build and Update Backend:
 ----------------------------------
 1. Open the "x64 Native Tools Command Prompt for VS 2019" (or whichever one you use).
 
@@ -26,14 +23,14 @@ Steps to Build and Update Backend:
 
 6. Give the backend folder a descriptive name for easy identification in LLM Studio.
 
-Important Notes:
+C: Important Notes:
 ----------------
 - Only ggml-base.dll and ggml-cpu.dll should be replaced.  
 - Do NOT replace llama.dll, ggml_llamacpp.dll, or any .node files (e.g., llm_engine_vulkan.node). These are part of LLM Studio's custom wrapper and breaking them will prevent the engine from loading.
 - Vulkan builds currently do not generate a separate ggml-vulkan.dll. Only CPU and CUDA DLLs are replaceable.
 - Always keep a backup of the original backend folder in case something breaks.
 
-Outcome:
+D: Outcome:
 --------
 Following these steps will update LLM Studio to use your custom-built llama.cpp backend with the latest performance improvements.
 
