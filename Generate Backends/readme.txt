@@ -15,8 +15,8 @@ B: Steps to Build and Update Backend:
 
 3. Run the build script of your choice using desired flags (for example, no avx or avx 512 and all cuda versions etc etc)
    Stock Flags: 
-   - AVX1
-   - DCUDA_ARCH_LIST=35
+   - native (already optimized for your system)
+   - DCUDA_ARCH_LIST=35 (this is for the kepler cards I am debugging, on, use newer ones ideally) 
 
 4. Once the build completes, go to the build output folder and copy the following files:
    - ggml-base.dll
