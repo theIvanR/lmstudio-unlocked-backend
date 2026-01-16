@@ -1,7 +1,7 @@
-# Important Update: It seems like in the newest version of lmstudio (0.3.39) the devs have changed the backend behavior. LM studio now checks hardware and throws an error in the actual application by saying "Error surveying Hardware". 
+# Important Update: Seems something is broken with new version causing polluted install!
 
 Recommended action: 
-- Short term: Install older version. Actively being investigated!
+- Short term: Dont update! Actively being investigated!
 - Long term: Switch to llamacpp webui. It is actively superior and completely open source software. 
 
 
