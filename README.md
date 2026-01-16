@@ -1,4 +1,4 @@
-# Important Update: Seems something is broken with new version causing polluted install!
+# Important Update: LM Studio backend behavior changed causing bug with "surveying hardware"
 
 Recommended action: 
 - Short term: Dont update! Actively being investigated!
