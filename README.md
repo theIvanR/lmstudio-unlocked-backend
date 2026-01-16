@@ -1,3 +1,9 @@
+# Important Update: It seems like in the newest version of lmstudio (0.3.39) the devs have changed the backend behavior. LM studio now checks hardware and throws an error in the actual application by saying "Error surveying Hardware". 
+
+Recommended action: install older version. Actively being investigated!
+
+
+---
 # LM Studio Unlocked Backend
 
 **Premise:** the developer team said it wouldn't work. we did it anyway and built our own **unofficial** backends for LM Studio — patched `llama.cpp` backends that let LM Studio run on much wider / older hardware.
