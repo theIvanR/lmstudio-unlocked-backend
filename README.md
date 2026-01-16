@@ -2,7 +2,14 @@
 
 Recommended action: 
 - Short term: Dont update! Actively being investigated!
-- Long term: Switch to llamacpp webui. It is actively superior and completely open source software. 
+- Long term: Switch to llamacpp webui. It is actively superior and completely open source software.
+
+Also, new LMStudio de installer is BROKEN
+stuff left in: 
+- HKEY_CURRENT_USER\Software\Classes\
+- user
+- appdata
+- localappdata
 
 
 ---
