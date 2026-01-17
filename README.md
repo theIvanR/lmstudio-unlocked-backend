@@ -1,16 +1,17 @@
-# Important Update: LM Studio backend behavior changed causing bug with "surveying hardware"
+# Update Regarding LM Studio App: 
+Changes have been made to the app breaking the lmstudio uninstaller and there appears to be a bug with surveying hardware. 
 
-Recommended action: 
-- Short term: Dont update! Actively being investigated!
-- Long term: Switch to llamacpp webui. It is actively superior and completely open source software.
-
-Also, new LMStudio de installer is BROKEN
-stuff left in: 
+Specifically, for the uninstall, the uninstaller leaves a mess in the system in the following locations: 
 - HKEY_CURRENT_USER\Software\Classes\
 - user
 - appdata
 - localappdata
 
+The surveying hardware bug is intermittent and testers on various machines are needed. It seems to afflict nvidia gpus in TCC mode, switching to WDDM appears to resolve the issue. 
+
+Recommended action: 
+- Short term: Dont update! Actively being investigated!
+- Long term: Switch to llamacpp webui. It is actively superior and completely open source software.
 
 ---
 # LM Studio Unlocked Backend
