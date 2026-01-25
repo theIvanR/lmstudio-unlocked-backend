@@ -9,10 +9,6 @@ Specifically, for the uninstall, the uninstaller leaves a mess in the system in 
 
 The surveying hardware bug is intermittent and testers on various machines are needed. It seems to afflict nvidia gpus in TCC mode, switching to WDDM appears to resolve the issue. 
 
-Recommended action: 
-- Short term: Dont update! Actively being investigated!
-- Long term: Switch to llamacpp webui. It is actively superior and completely open source software.
-
 ---
 # LM Studio Unlocked Backend
 
