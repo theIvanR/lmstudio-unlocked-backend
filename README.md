@@ -16,13 +16,17 @@ The surveying hardware bug is intermittent and testers on various machines are n
 
 ## Backends Available: 
 
-- ✅ `cpu-avx1` — CPU-only AVX1 build (confirmed working on Ivy Bridge)  
-- ✅ `vulkan-avx1` — Vulkan GPU backend built with AVX1 support (confirmed working on Ivy Bridge + Vulkan-capable GPU)
+- ✅ Windows `cpu-avx1` — CPU-only AVX1 build (confirmed working on Ivy Bridge)  
+- ✅ Wndows `vulkan-avx1` — Vulkan GPU backend built with AVX1 support (confirmed working on Ivy Bridge + Vulkan-capable GPU)
 
 ## Backends in Developed:
+- Arch Linux — coming soon
 - 🚧 `noavx-experimental` — experimental pure fallback; limited performance and compatibility
 - 🚧 `avx512++` — coming soon
 - 🚧 `cuda` — coming soon
+
+## Custom Backends for your System 🚀 ?
+- Follow the instructions in `Generate Backends`
   
 ## Important Update Regarding Stock GPU Backends: 
 In new versions, Vulkan backend is already built without AVX2 so patching it is and **confirmed working**. This is likely to work on CUDA gpus as well however is untested at the monent.
