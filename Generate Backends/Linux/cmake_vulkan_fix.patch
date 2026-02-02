@@ -1,0 +1,15 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 1234567..abcdef0 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -200,6 +200,12 @@ if (GGML_VULKAN)
+     message(STATUS "Including Vulkan backend")
+     add_subdirectory(ggml/src/ggml-vulkan)
+
++    # MXFP4 is not yet implemented for Vulkan
++    if (GGML_VULKAN_MXFP)
++        message(WARNING "GGML_VULKAN_MXFP is not supported yet. Disabling.")
++        set(GGML_VULKAN_MXFP OFF CACHE BOOL "" FORCE)
++    endif()
++
+ endif()
