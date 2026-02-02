@@ -1,15 +1,3 @@
-# Update Regarding LM Studio App: 
-Changes have been made to the app breaking the lmstudio uninstaller and there appears to be a bug with surveying hardware. 
-
-Specifically, for the uninstall, the uninstaller leaves a mess in the system in the following locations: 
-- HKEY_CURRENT_USER\Software\Classes\
-- user
-- appdata
-- localappdata
-
-The surveying hardware bug is intermittent and testers on various machines are needed. It seems to afflict nvidia gpus in TCC mode, switching to WDDM appears to resolve the issue. 
-
----
 # LM Studio Unlocked Backend
 
 **Premise:** the developer team said it wouldn't work. we did it anyway and built our own **unofficial** backends for LM Studio — patched `llama.cpp` backends that let LM Studio run on much wider / older hardware.
@@ -62,6 +50,19 @@ In new versions, Vulkan backend is already built without AVX2 so patching it is 
 - Vulkan backend performance depends heavily on your GPU and driver — older Vulkan-capable GPUs can still be effective for smaller models.
 - If you are experiencing issues like 18446744072635812000 and other random model crashes on kepler gpus, set the batch evaluation size lower to say 384. This is a known issue in vulkan which as of September 2025 has not been patched by devs. 
 - Flash Attention currently appears broken on Vulkan, issue appears to be with an underflow and a NaN in the llama backend itself, hopefully will be mitigated soon. 
+
+# Update Regarding LM Studio App (windows): 
+Changes have been made to the app breaking the lmstudio uninstaller and there appears to be a bug with surveying hardware. 
+
+Specifically, for the uninstall, the uninstaller leaves a mess in the system in the following locations: 
+- HKEY_CURRENT_USER\Software\Classes\
+- user
+- appdata
+- localappdata
+
+The surveying hardware bug is intermittent and testers on various machines are needed. It seems to afflict nvidia gpus in TCC mode, switching to WDDM appears to resolve the issue. 
+
+---
 
 ## Licensing, Disclaimer, Credits
 
