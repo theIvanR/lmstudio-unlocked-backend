@@ -6,7 +6,7 @@
 
 - ✅ `windows-cpu-avx1` — CPU-only AVX1 build (confirmed working on Ivy Bridge)  
 - ✅ `windows-vulkan-avx1` — Vulkan GPU backend built with AVX1 support (confirmed working on Ivy Bridge + Vulkan-capable GPU)
-- 🌀 Arch Linux build script
+- 🌀 Arch Linux build script (testers especially wanted!)
 
 ## Backends in Developed:
 - 🚧 `noavx-experimental` — experimental pure fallback; limited performance and compatibility
