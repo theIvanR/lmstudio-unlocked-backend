@@ -16,8 +16,7 @@
 ## Custom Backends for your System 🚀 ?
 - Follow the instructions in `Generate Backends`. Windows confirmed working, (Arch) Linux experimental, patches with MXFP4 required.
   
-## Important Update Regarding Stock GPU Backends: 
-In new versions, Vulkan backend is already built without AVX2 so patching it is and **confirmed working**. This is likely to work on CUDA gpus as well however is untested at the monent.
+**NOTE** : To save time building, on newer Windoes versions Vulkan backend is already built without AVX2 so patching it is and **confirmed working**. This is likely to work on CUDA gpus as well however is untested at the monent. (Patch in the manifest json file)
 ```
 "instruction_set_extensions": [
       "AVX"
