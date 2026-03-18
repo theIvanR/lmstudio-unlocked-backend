@@ -14,7 +14,12 @@
 - 🚧 `cuda` — coming soon
 
 ## Custom Backends for your System 🚀 ?
-- Follow the instructions in `Generate Backends`. Windows confirmed working, (Arch) Linux experimental, patches with MXFP4 required.
+- Follow the instructions in `Generate Backends`. Use the unified `build.cmd` (Windows) or `build.sh` (Linux) script:
+  ```
+  build.cmd cpu|vulkan|cuda [llama_src_dir]
+  ./build.sh cpu|vulkan|cuda [llama_src_dir]
+  ```
+- Windows confirmed working, (Arch) Linux experimental, patches with MXFP4 required.
   
 **NOTE** : To save time building, on newer Windoes versions Vulkan backend is already built without AVX2 so patching it is and **confirmed working**. This is likely to work on CUDA gpus as well however is untested at the monent. (Patch in the manifest json file)
 ```
