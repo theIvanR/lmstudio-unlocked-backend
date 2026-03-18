@@ -67,7 +67,7 @@ The surveying hardware bug is intermittent and testers on various machines are n
 ## Licensing, Disclaimer, Credits
 
 - **Unofficial / experimental:** Community-made patches; use at your own risk.  
-- **License:** MIT, following `llama.cpp` conventions.  
+- **License:** MIT (see [LICENSE](LICENSE)), following `llama.cpp` conventions.
 - **No warranties:** Not guaranteed for production or mission-critical use—use official LM Studio backends for stability.  
 - **Credits:** Patches tested by repo maintainers; based on `llama.cpp` and LM Studio work.
 
