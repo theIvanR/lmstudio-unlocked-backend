@@ -11,12 +11,23 @@ B: Steps to Build and Update Backend:
 
 1. Open the "x64 Native Tools Command Prompt for VS 2019" (or whichever one you use).
 
-2. Run the fetch script
+2. Run the fetch script:
+   fetch_llama.cmd
 
-3. Run the build script of your choice using desired flags (for example, no avx or avx 512 and all cuda versions etc etc)
-   Stock Flags: 
+3. Run the unified build script with the backend you want:
+   build.cmd cpu
+   build.cmd vulkan
+   build.cmd cuda
+
+   You can also pass a custom llama.cpp source directory:
+   build.cmd vulkan C:\path\to\llama.cpp
+
+   The individual build_cpu.cmd, build_gpu_vulkan.cmd, and build_gpu_cuda.cmd
+   scripts are still available if you prefer them.
+
+   Stock Flags (set automatically by build.cmd):
    - native (already optimized for your system)
-   - DCUDA_ARCH_LIST=35 (this is for the kepler cards I am debugging, on, use newer ones ideally) 
+   - DCUDA_ARCH_LIST=35 (this is for the kepler cards I am debugging on, use newer ones ideally)
 
 4. Once the build completes, go to the build output folder and copy the following files:
    - ggml-base.dll

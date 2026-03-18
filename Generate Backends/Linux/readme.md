@@ -11,21 +11,25 @@ sudo pacman -S base-devel gcc cmake git python python-pip \
   libx11 libxrandr libxcursor libxi libxxf86vm
 ```
 
-## Build with Vulkan
+## Build
+
+Use the unified build script:
 
 ```bash
-mkdir build-vulkan
-cd build-vulkan
+# Vulkan backend
+./build.sh vulkan
 
-cmake .. \
-  -DLLAMA_BUILD_EXAMPLES=OFF \
-  -DLLAMA_BUILD_TESTS=OFF \
-  -DLLAMA_BUILD_TOOLS=OFF \
-  -DGGML_VULKAN=ON \
-  -DGGML_VULKAN_MXFP=OFF
+# CPU-only backend
+./build.sh cpu
 
-cmake --build . -j$(nproc)
+# CUDA backend
+./build.sh cuda
+
+# With a custom llama.cpp source directory
+./build.sh vulkan /path/to/llama.cpp
 ```
+
+The old `build_vulkan.sh` script is still available if you prefer it.
 
 ## Why MXFP4 is disabled
 
