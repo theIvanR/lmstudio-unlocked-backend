@@ -6,7 +6,7 @@ rem Fetch or update the latest llama.cpp from GitHub
 rem ==========================================
 
 rem Set target directory
-set "TARGET_DIR=C:\Users\Admin\source\llama.cpp"
+set "TARGET_DIR=%%USERPROFILE%%\source\llama.cpp"
 
 rem Ensure target directory exists
 if not exist "%TARGET_DIR%" (
