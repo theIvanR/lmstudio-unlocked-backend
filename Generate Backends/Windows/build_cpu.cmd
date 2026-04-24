@@ -4,7 +4,7 @@ setlocal
 REM =========================
 REM User configuration (optionally pass llama dir as first argument
 REM =========================
-set "DEFAULT_SRC_DIR=C:\Users\Admin\source\llama.cpp"
+set "DEFAULT_SRC_DIR=%USERPROFILE%\source\llama.cpp"
 
 if "%~1"=="" (
     set "SRC_DIR=%DEFAULT_SRC_DIR%"
