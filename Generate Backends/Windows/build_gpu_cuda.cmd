@@ -6,22 +6,18 @@ REM User configuration (optionally pass llama dir as first argument
 REM =========================
 set "DEFAULT_SRC_DIR=%USERPROFILE%\source\llama.cpp"
 
-if "%~1"=="" (
-    set "SRC_DIR=%DEFAULT_SRC_DIR%"
-) else (
-    set "SRC_DIR=%~1"
-)
+if "%~1"=="" (set "SRC_DIR=%DEFAULT_SRC_DIR%") else (set "SRC_DIR=%~1")
 
-if not exist "%SRC_DIR%" (
-    echo [ERROR] Source directory "%SRC_DIR%" does not exist.
+pushd "%SRC_DIR%" >nul 2>&1
+if errorlevel 1 (
+    echo [ERROR] Invalid source directory: "%SRC_DIR%"
     exit /b 1
 )
 
-pushd "%SRC_DIR%" >nul 2>&1 || (
-    echo [ERROR] Failed to enter "%SRC_DIR%".
-    exit /b 1
-)
+echo [INFO] nvcc version:
+nvcc --version
 
+REM pause
 
 REM -------------------------
 REM Set Flags and Clean up
@@ -45,29 +41,29 @@ if exist "%BUILD_DIR%" (
 
 
 REM -------------------------
-REM Configure with CMake
+REM Configure with CMake (set architectures to what you have)
 REM -------------------------
 echo [INFO] Building in "%BUILD_DIR%"
+set "BUILD_FAILED=0"
 
 cmake -S . -B "%BUILD_DIR%" ^
       -G "Ninja" ^
       -DCMAKE_BUILD_TYPE=Release ^
       -DLLAMA_CURL=OFF ^
       -DGGML_NATIVE=ON ^
-      -DUSE_CUDA=ON ^
       -DGGML_CUDA=ON ^
-      -DCUDA_ARCH_LIST=35
-
-REM remove release to build *everything* and not just core
+      -DCMAKE_CUDA_ARCHITECTURES=35
+	  
 cmake --build "%BUILD_DIR%" --verbose
+if errorlevel 1 set "BUILD_FAILED=1"
 
-if errorlevel 1 (
+popd
+
+if "%BUILD_FAILED%"=="1" (
     echo [ERROR] CMake failed
-    popd
     pause
     exit /b 1
 )
 
 echo [SUCCESS] Build finished successfully!
-popd
 exit /b 0
