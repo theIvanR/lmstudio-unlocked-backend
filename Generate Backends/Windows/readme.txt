@@ -40,3 +40,14 @@ D: Outcome:
 --------
 Following these steps will update LLM Studio to use your custom-built llama.cpp backend with the latest performance improvements.
 
+(debug NOTE)
+for Nvidia call with something similar to this
+call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat" x64 -vcvars_ver=14.29
+
+nvcc test_cuda_sm35.cu ^
+  -o test_cuda_sm35.exe ^
+  -arch=sm_35 ^
+  -I "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include" ^
+  -L "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\lib\x64" ^
+  -lcudnn -lcudart
+
