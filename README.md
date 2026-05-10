@@ -44,24 +44,19 @@
 - Restart LM Studio (full restart — not just window refresh).  
 - If the backend crashes on start:
 - Try the `noavx-experimental` as a fallback to confirm AVX issues.  
-- Check the `stderr` / `stdout` logs produced by LM Studio for the backend process.  
-- Performance expectations:
-- AVX1 CPU builds will be slower than AVX2/AVX512 builds but are usable for smaller models and experiments.  
-- Vulkan backend performance depends heavily on your GPU and driver — older Vulkan-capable GPUs can still be effective for smaller models.
-- If you are experiencing issues like 18446744072635812000 and other random model crashes on kepler gpus, set the batch evaluation size lower to say 384. This is a known issue in vulkan which as of September 2025 has not been patched by devs. 
-- Flash Attention currently appears broken on Vulkan, issue appears to be with an underflow and a NaN in the llama backend itself, hopefully will be mitigated soon. 
+- Flash Attention currently appears broken on Vulkan, issue appears to be with an underflow and a NaN in the llama backend itself, hopefully will be mitigated soon.
+- The surveying hardware bug is intermittent and testers on various machines are needed. It seems to afflict nvidia gpus in TCC mode, switching to WDDM appears to resolve the issue. 
 
-# Update Regarding LM Studio App (windows): 
-Changes have been made to the app breaking the lmstudio uninstaller and there appears to be a bug with surveying hardware. 
-
-Specifically, for the uninstall, the uninstaller leaves a mess in the system in the following locations: 
+# ** IMPORTANT UPDATE REGARDING LMSTUDIO **
+### 1: Uninstall on Windows is currently broken and leaves a mess in the system in the following locations: 
 - HKEY_CURRENT_USER\Software\Classes\
 - user
 - appdata
 - localappdata
 
-The surveying hardware bug is intermittent and testers on various machines are needed. It seems to afflict nvidia gpus in TCC mode, switching to WDDM appears to resolve the issue. 
 
+### 2: With recent improvements to llama cpp web ui I can no longer recommend to use LM Studio especially on legacy systems. Instead, run the llama cpp backends directly via the web UI. Instructions provided in my other repository: 
+https://github.com/theIvanR/llama-on-legacy-gpu/tree/main
 ---
 
 ## Licensing, Disclaimer, Credits
