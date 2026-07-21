@@ -24,21 +24,26 @@ REM pause
 REM -------------------------
 REM Set Flags and Clean up
 REM -------------------------
+set "CLEAN_BUILD=1"
 set "BUILD_DIR=build_gpu_cuda"
 set "CL=/bigobj %CL% /Ot /fp:fast"
 
 
-if exist "%BUILD_DIR%" (
-    echo [INFO] Removing old build directory "%BUILD_DIR%"...
-    
-	rmdir /s /q "%BUILD_DIR%"
-    
-	if errorlevel 1 (
-		echo [ERROR] Failed to Remove Dir
-		popd
-		pause
-		exit /b 1
-	)
+if "%CLEAN_BUILD%"=="1" (
+    if exist "%BUILD_DIR%" (
+        echo [INFO] Removing old build directory "%BUILD_DIR%"...
+
+        rmdir /s /q "%BUILD_DIR%"
+
+        if errorlevel 1 (
+            echo [ERROR] Failed to remove build directory.
+            popd
+            pause
+            exit /b 1
+        )
+    )
+) else (
+    echo [INFO] Keeping existing build directory.
 )
 
 
