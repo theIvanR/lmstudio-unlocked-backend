@@ -30,7 +30,7 @@ REM -------------------------
 REM Set Flags and Clean up
 REM -------------------------
 set "CLEAN_BUILD=1"
-set "BUILD_DIR=build_gpu_cuda"
+set "BUILD_DIR=build_gpu_vulkan"
 set "CL=/bigobj %CL% /Ot /fp:fast"
 
 
