@@ -1,7 +1,7 @@
 @echo off
 setlocal
-REM possibly needed if you are on old gpu
-REM call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat" x64 -vcvars_ver=14.29
+REM Call your visual studio cmd here (or other version)
+call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat" x64 -vcvars_ver=14.29
 
 REM =========================
 REM User configuration (optionally pass llama dir as first argument
