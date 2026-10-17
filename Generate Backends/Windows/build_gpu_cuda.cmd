@@ -24,7 +24,7 @@ REM pause
 REM -------------------------
 REM Set Flags and Clean up
 REM -------------------------
-set "CLEAN_BUILD=1"
+set "CLEAN_BUILD=0"
 set "BUILD_DIR=build_gpu_cuda"
 set "CL=/bigobj %CL% /Ot /fp:fast"
 
@@ -59,6 +59,7 @@ cmake -S . -B "%BUILD_DIR%" ^
       -DLLAMA_CURL=OFF ^
       -DGGML_NATIVE=ON ^
       -DGGML_CUDA=ON ^
+      -DGGML_CUDA_GRAPHS=ON ^
       -DCMAKE_CUDA_ARCHITECTURES=35
 	  
 cmake --build "%BUILD_DIR%" --verbose
