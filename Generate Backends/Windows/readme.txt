@@ -11,6 +11,7 @@ B: Steps to Build and Update Backend:
 
 1. Open the Terminal and either run directly if you have "x64 Native Tools Command Prompt for VS 20xx" or edit to run with your version.
    - NOTE: if using a compatibility toolkit, call via eg "call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat" x64 -vcvars_ver=14.29" for v 142 or your version. 
+   - or for example for 2019: call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
 
 2. Run the fetch script
 
