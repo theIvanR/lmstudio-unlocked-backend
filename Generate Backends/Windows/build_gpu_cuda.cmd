@@ -48,7 +48,7 @@ if "%CLEAN_BUILD%"=="1" (
 
 
 REM -------------------------
-REM Configure with CMake (set architectures to what you have)
+REM Configure with CMake (set architectures to what you have, here target is kepler 3.5)
 REM -------------------------
 echo [INFO] Building in "%BUILD_DIR%"
 set "BUILD_FAILED=0"
