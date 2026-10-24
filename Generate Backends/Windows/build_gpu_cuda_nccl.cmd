@@ -3,6 +3,8 @@ setlocal
 REM Call your visual studio cmd here (or other version)
 call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
 
+REM git fetch nccl before launching from https://github.com/theIvanR/nccl-on-windows
+
 REM =========================
 REM User configuration (optionally pass llama dir as first argument
 REM =========================
