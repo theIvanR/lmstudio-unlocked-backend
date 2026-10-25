@@ -1,7 +1,8 @@
 @echo off
 setlocal
+
 REM Call your visual studio cmd here (or other version)
-call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat" x64 -vcvars_ver=14.29
+call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
 
 REM =========================
 REM User configuration (optionally pass llama dir as first argument
